@@ -1,6 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <oracle.dbtools.crest.model.design.relational.RelationalDesign>
    <object objectType="Table" objectID="45E0E0A6-2FBE-A325-D626-0F8D64ABDEE0" name="LoginAttempt" seqName="seg_0"/>
-   <object objectType="Table" objectID="F5D980D1-BECE-495B-ACB8-21E2FD40E9F0" name="LoginTrack" seqName="seg_0"/>
+   <object objectType="Table" objectID="78D422FA-4381-8D56-23DC-EC0575091335" name="Lockouts" seqName="seg_0"/>
    <object objectType="Table" objectID="A3307FA6-C3A3-2C24-B5C2-F8668D976339" name="UserInfo" seqName="seg_0"/>
+   <object objectType="Table" objectID="F5D980D1-BECE-495B-ACB8-21E2FD40E9F0" name="LoginTrack" seqName="seg_0"/>
 </oracle.dbtools.crest.model.design.relational.RelationalDesign>
