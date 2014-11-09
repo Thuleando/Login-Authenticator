@@ -1,0 +1,32 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="45E0E0A6-2FBE-A325-D626-0F8D64ABDEE0" name="LoginAttempt">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-09 00:26:16 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Username" id="DBAC9027-3369-942C-C589-9E155499FD6F">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-09 00:27:11 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WhenAttempted" id="31A5895E-FCF2-91D0-7B07-E8E7F602633A">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-09 00:27:11 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>24</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

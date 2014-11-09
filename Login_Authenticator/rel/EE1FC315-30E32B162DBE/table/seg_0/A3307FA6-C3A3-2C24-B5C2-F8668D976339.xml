@@ -1,0 +1,42 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A3307FA6-C3A3-2C24-B5C2-F8668D976339" name="UserInfo">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-09 00:21:48 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="a" id="B886F16D-45D9-E734-3D8E-5539BA97F4D0">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-09 00:23:16 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Username" id="90770484-91D0-4AB5-DAE4-945718A474E8">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-09 00:23:16 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="F266B9CB-95D8-1FBC-F0A1-3570EF35A3FA">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-09 00:23:16 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

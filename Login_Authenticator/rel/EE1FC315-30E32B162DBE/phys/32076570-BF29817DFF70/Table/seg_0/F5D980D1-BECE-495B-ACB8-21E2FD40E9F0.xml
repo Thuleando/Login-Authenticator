@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="LoginTrack" directorySegmentName="seg_0" id="F5D980D1-BECE-495B-ACB8-21E2FD40E9F0">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-09 00:28:43 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="WhenCreated" id="708FAC13-99AA-1FE2-EFCA-E690C3C704B2">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-09 00:28:43 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="Username" id="C78B3AEA-903F-E93B-D5FA-B67C7E3076EC">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-09 00:28:43 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev11g>
