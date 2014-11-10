@@ -6,14 +6,14 @@
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="a" id="B886F16D-45D9-E734-3D8E-5539BA97F4D0">
+<Column name="ID" id="B886F16D-45D9-E734-3D8E-5539BA97F4D0">
 <createdBy>Jason</createdBy>
 <createdTime>2014-11-09 00:23:16 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="Username" id="90770484-91D0-4AB5-DAE4-945718A474E8">
@@ -38,5 +38,50 @@
 <dataTypeSize>10</dataTypeSize>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="AccountStatus" id="9097B161-7280-6D75-5BC1-02288440C137">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:13:19 UTC</createdTime>
+<comment>&apos;LOCKEDOUT&apos; or &apos;ACTIVE&apos; as valid values?</comment>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WhenCreated" id="ACFEF159-5099-1BA2-EF4B-227A3F21F38B">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:18:12 UTC</createdTime>
+<comment>Moved into the &apos;User accounts&apos; table</comment>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B8539D2B-C46A-C22B-9EF3-2BDD88802BFB" name="UserInfo_PK">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:08:00 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B886F16D-45D9-E734-3D8E-5539BA97F4D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="74EC35BA-BE4D-8746-9661-332A75F91C74" name="UserInfo__Username_UN">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:08:23 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="90770484-91D0-4AB5-DAE4-945718A474E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
 </Table>

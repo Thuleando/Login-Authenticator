@@ -11,7 +11,17 @@
 <createdTime>2014-11-09 00:28:43 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 </ColumnProxy>
-<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="a" id="B886F16D-45D9-E734-3D8E-5539BA97F4D0">
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="AccountStatus" id="9097B161-7280-6D75-5BC1-02288440C137">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:13:19 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="WhenCreated" id="ACFEF159-5099-1BA2-EF4B-227A3F21F38B">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:18:12 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="ID" id="B886F16D-45D9-E734-3D8E-5539BA97F4D0">
 <createdBy>Jason</createdBy>
 <createdTime>2014-11-09 00:28:43 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
@@ -22,4 +32,20 @@
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 </ColumnProxy>
 </columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="UserInfo_PK" id="B8539D2B-C46A-C22B-9EF3-2BDD88802BFB">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:08:00 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="UserInfo__Username_UN" id="74EC35BA-BE4D-8746-9661-332A75F91C74">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:08:23 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
 </TableProxyOraclev11g>

@@ -6,26 +6,62 @@
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="Username" id="C78B3AEA-903F-E93B-D5FA-B67C7E3076EC">
+<Column name="UserInfo_ID" id="8678AE9F-993F-DA44-4049-CBDD472CC275">
 <createdBy>Jason</createdBy>
-<createdTime>2014-11-09 00:25:45 UTC</createdTime>
+<createdTime>2014-11-10 00:08:52 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>8</dataTypeSize>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<delegate>B886F16D-45D9-E734-3D8E-5539BA97F4D0</delegate>
+<previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EB0A2D94-76B6-CADF-1C8B-AE9E36646125" referredColumn="B886F16D-45D9-E734-3D8E-5539BA97F4D0"/>
+</associations>
 </Column>
-<Column name="WhenCreated" id="708FAC13-99AA-1FE2-EFCA-E690C3C704B2">
+<Column name="WhenInitiated" id="708FAC13-99AA-1FE2-EFCA-E690C3C704B2">
 <createdBy>Jason</createdBy>
 <createdTime>2014-11-09 00:25:45 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WhenTerminated" id="AF69D71A-AB43-3479-E03E-D935C5353B94">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:17:51 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4B849938-C787-0587-E57A-B31C5172421A" name="LoginTrack_PK">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:09:15 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8678AE9F-993F-DA44-4049-CBDD472CC275"/>
+<colUsage columnID="708FAC13-99AA-1FE2-EFCA-E690C3C704B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4D80A87B-50D0-A0EF-4352-41BEDDCE02AC" name="LoginTrack_UserInfo_FK">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:08:52 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8678AE9F-993F-DA44-4049-CBDD472CC275"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
 </Table>

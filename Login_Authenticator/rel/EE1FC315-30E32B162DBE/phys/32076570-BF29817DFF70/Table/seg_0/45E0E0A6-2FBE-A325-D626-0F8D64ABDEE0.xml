@@ -11,10 +11,30 @@
 <createdTime>2014-11-09 00:28:43 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 </ColumnProxy>
-<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="Username" id="DBAC9027-3369-942C-C589-9E155499FD6F">
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="AttemptStatus" id="CE159B76-E8ED-FC5F-B736-472829DAB8B1">
 <createdBy>Jason</createdBy>
-<createdTime>2014-11-09 00:28:43 UTC</createdTime>
+<createdTime>2014-11-10 00:16:13 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="UserInfo_ID" id="EF2EFDD9-5CC0-9B99-BC4A-147CCC12141F">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:09:00 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 </ColumnProxy>
 </columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="LoginAttempt_UserInfo_FK" id="FD6744D7-8844-67C9-E28B-AF63E023D68F">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:09:00 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="LoginAttempt_PK" id="7824017E-35F5-3DCA-4E6E-D8C7707EB6D2">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-10 00:09:28 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
 </TableProxyOraclev11g>

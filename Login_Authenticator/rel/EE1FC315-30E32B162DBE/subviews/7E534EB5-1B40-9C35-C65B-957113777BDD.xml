@@ -14,19 +14,33 @@
 <objectViews>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="45E0E0A6-2FBE-A325-D626-0F8D64ABDEE0" otype="Table" vid="FDBD9AE5-93DA-7547-A48F-1281B5AE0D8D">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="210" y="279" width="214" height="71"/>
-</OView>
-<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="78D422FA-4381-8D56-23DC-EC0575091335" otype="Table" vid="2F11B552-7E18-938F-8619-F1B36D0D7DE9">
-<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="654" y="200" width="170" height="110"/>
+<bounds x="645" y="180" width="268" height="91"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="A3307FA6-C3A3-2C24-B5C2-F8668D976339" otype="Table" vid="0D556FD2-4329-505D-144E-C15491424F45">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="339" y="167" width="174" height="83"/>
+<bounds x="374" y="155" width="203" height="134"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="F5D980D1-BECE-495B-ACB8-21E2FD40E9F0" otype="Table" vid="3969E691-58C3-D821-4F2A-689203BA7B6C">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="82" y="170" width="216" height="77"/>
+<bounds x="41" y="170" width="257" height="99"/>
 </OView>
 </objectViews>
+<connectors>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="1BBF1425-62AB-56CB-3A85-9FC67D13CB11" otype="FKIndexAssociation" vid_source="0D556FD2-4329-505D-144E-C15491424F45" vid_target="FDBD9AE5-93DA-7547-A48F-1281B5AE0D8D">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="577" y="225"/>
+<point x="645" y="225"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="EB0A2D94-76B6-CADF-1C8B-AE9E36646125" otype="FKIndexAssociation" vid_source="0D556FD2-4329-505D-144E-C15491424F45" vid_target="3969E691-58C3-D821-4F2A-689203BA7B6C">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="374" y="219"/>
+<point x="298" y="219"/>
+</points>
+</Connector>
+</connectors>
 </Diagram>
