@@ -14,24 +14,24 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="Username" id="90770484-91D0-4AB5-DAE4-945718A474E8">
 <createdBy>Jason</createdBy>
 <createdTime>2014-11-09 00:23:16 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>8</dataTypeSize>
+<dataTypeSize>15</dataTypeSize>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="password" id="F266B9CB-95D8-1FBC-F0A1-3570EF35A3FA">
 <createdBy>Jason</createdBy>
 <createdTime>2014-11-09 00:23:16 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
@@ -43,11 +43,12 @@
 <createdTime>2014-11-10 00:13:19 UTC</createdTime>
 <comment>&apos;LOCKEDOUT&apos; or &apos;ACTIVE&apos; as valid values?</comment>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
+<defaultValue>ACTIVE</defaultValue>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>10</dataTypeSize>
+<usesDefaultValue>true</usesDefaultValue>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="WhenCreated" id="ACFEF159-5099-1BA2-EF4B-227A3F21F38B">
@@ -56,8 +57,10 @@
 <comment>Moved into the &apos;User accounts&apos; table</comment>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
+<defaultValue>CURRENT_DATE</defaultValue>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
+<usesDefaultValue>true</usesDefaultValue>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
@@ -84,4 +87,24 @@
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
+<tableCheckConstraints>
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="USERNAME_PASSWORD_NOT_SAME" directorySegmentName="seg_0" id="00BDDAE1-90F4-F69B-3D46-AD3AA1B1FF21">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-11 22:40:00 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<rule>TRIM(username) != TRIM(password)</rule>
+</tableCheckConstraint>
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="PASSWORD_START_UPPERCASE" directorySegmentName="seg_0" id="B8FF3E46-8603-5E45-64EC-44464005AA7E">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-11 22:40:00 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<rule>substr(password,1,1) = upper (substr(password,1,1))</rule>
+</tableCheckConstraint>
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="USERNAME_START_UPPERCASE" directorySegmentName="seg_0" id="61D36711-398D-A67C-416D-62756AF30C53">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-11 22:40:00 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+<rule>substr(username,1,1)=upper(substr(username,1,1))</rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
 </Table>

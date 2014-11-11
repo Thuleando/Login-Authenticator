@@ -26,17 +26,22 @@
 <createdTime>2014-11-09 00:25:45 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
+<defaultValue>CURRENT_DATE</defaultValue>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
+<usesDefaultValue>true</usesDefaultValue>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="WhenTerminated" id="AF69D71A-AB43-3479-E03E-D935C5353B94">
 <createdBy>Jason</createdBy>
 <createdTime>2014-11-10 00:17:51 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
+<defaultValue>NULL</defaultValue>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
+<usesDefaultValue>true</usesDefaultValue>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>

@@ -26,8 +26,10 @@
 <createdTime>2014-11-09 00:27:11 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
+<defaultValue>CURRENT_DATE</defaultValue>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
+<usesDefaultValue>true</usesDefaultValue>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="AttemptStatus" id="CE159B76-E8ED-FC5F-B736-472829DAB8B1">
@@ -35,11 +37,12 @@
 <createdTime>2014-11-10 00:16:13 UTC</createdTime>
 <comment>&apos;SUCCEEDED&apos; or &apos;FAILED&apos; as valid values?</comment>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
+<defaultValue>FAILED</defaultValue>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>10</dataTypeSize>
+<usesDefaultValue>true</usesDefaultValue>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>

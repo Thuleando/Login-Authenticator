@@ -15,11 +15,13 @@
 <createdBy>Jason</createdBy>
 <createdTime>2014-11-10 00:13:19 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
+<defaultValue>ACTIVE</defaultValue>
 </ColumnProxy>
 <ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="WhenCreated" id="ACFEF159-5099-1BA2-EF4B-227A3F21F38B">
 <createdBy>Jason</createdBy>
 <createdTime>2014-11-10 00:18:12 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
+<defaultValue>CURRENT_DATE</defaultValue>
 </ColumnProxy>
 <ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="ID" id="B886F16D-45D9-E734-3D8E-5539BA97F4D0">
 <createdBy>Jason</createdBy>
@@ -40,6 +42,23 @@
 <indexSort>SORTED</indexSort>
 </PrimaryKey>
 </primaryKeys>
+<tableCheckConstraints>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="USERNAME_PASSWORD_NOT_SAME" id="00BDDAE1-90F4-F69B-3D46-AD3AA1B1FF21">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-11 22:40:00 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="USERNAME_START_UPPERCASE" id="61D36711-398D-A67C-416D-62756AF30C53">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-11 22:40:00 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="PASSWORD_START_UPPERCASE" id="B8FF3E46-8603-5E45-64EC-44464005AA7E">
+<createdBy>Jason</createdBy>
+<createdTime>2014-11-11 22:40:00 UTC</createdTime>
+<ownerDesignName>Login_Authenticator</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
 <uniqueKeys>
 <UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="UserInfo__Username_UN" id="74EC35BA-BE4D-8746-9661-332A75F91C74">
 <createdBy>Jason</createdBy>

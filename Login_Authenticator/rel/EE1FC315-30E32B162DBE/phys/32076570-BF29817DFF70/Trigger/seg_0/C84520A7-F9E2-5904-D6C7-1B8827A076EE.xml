@@ -4,7 +4,7 @@
 <createdTime>2014-11-09 00:29:13 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 <actions>INSERT</actions>
-<body> BEGIN&lt;br/&gt;      DBMS_OUTPUT.PUT_LINE(&apos; HELLO TR_CRUSer&apos; );&lt;br/&gt;&lt;br/&gt;     INSERT INTO LoginTrack VALUES(:NEW.Username, (select CURRENT_DATE from dual));&lt;br/&gt;&lt;br/&gt; END TR_CRUser;</body>
+<body>BEGIN&lt;br/&gt;      DBMS_OUTPUT.PUT_LINE(&apos; HELLO TR_CRUSer&apos; );&lt;br/&gt;&lt;br/&gt;     INSERT INTO LoginTrack (USERINFO_ID) VALUES(:NEW.ID);&lt;br/&gt;&lt;br/&gt; END TR_CRUser; </body>
 <triggerTime>AFTER</triggerTime>
 <ref_NEW_AS>NEW</ref_NEW_AS>
 <state>ENABLE</state>
