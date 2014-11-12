@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="EE1FC315-0BF2-7ADE-A692-30E32B162DBE" mainViewID="7E534EB5-1B40-9C35-C65B-957113777BDD">
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational" id="EE1FC315-0BF2-7ADE-A692-30E32B162DBE" mainViewID="7E534EB5-1B40-9C35-C65B-957113777BDD">
 <createdBy>Jason</createdBy>
 <createdTime>2014-11-09 00:19:03 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>

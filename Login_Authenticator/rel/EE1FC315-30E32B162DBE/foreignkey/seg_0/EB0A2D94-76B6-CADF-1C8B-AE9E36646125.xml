@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EB0A2D94-76B6-CADF-1C8B-AE9E36646125" name="LoginTrack_UserInfo_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EB0A2D94-76B6-CADF-1C8B-AE9E36646125" name="Sessions_Accounts_FK">
 <createdBy>Jason</createdBy>
 <createdTime>2014-11-10 00:08:52 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
