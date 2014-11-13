@@ -6,7 +6,7 @@
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="AccountsID" id="8678AE9F-993F-DA44-4049-CBDD472CC275">
+<Column name="Accounts_ID" id="8678AE9F-993F-DA44-4049-CBDD472CC275">
 <createdBy>Jason</createdBy>
 <createdTime>2014-11-10 00:08:52 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
@@ -26,9 +26,11 @@
 <createdTime>2014-11-09 00:25:45 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
+<defaultValue>LOCALTIMESTAMP</defaultValue>
 <use>1</use>
 <logicalDatatype>LOGDT015</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
+<usesDefaultValue>true</usesDefaultValue>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="WhenTerminated" id="AF69D71A-AB43-3479-E03E-D935C5353B94">
@@ -38,9 +40,11 @@
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
+<defaultValue>NULL</defaultValue>
 <use>1</use>
 <logicalDatatype>LOGDT015</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
+<usesDefaultValue>true</usesDefaultValue>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>

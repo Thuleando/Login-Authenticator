@@ -44,9 +44,10 @@
 <createdTime>2014-11-10 00:18:12 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
+<defaultValue>LOCALTIMESTAMP</defaultValue>
 <use>1</use>
 <logicalDatatype>LOGDT015</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
+<usesDefaultValue>true</usesDefaultValue>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="UnlockDate" id="1A82CFD3-AAE6-BE5A-13CA-1D1AB16971F2">
@@ -55,9 +56,11 @@
 <comment>Most recent date that the account was unlocked. For new accounts, it should be set to the same date as WhenCreated.&lt;br/&gt;&lt;br/&gt;This is to deal with scenarios when an administrator has unlocked an account upon the user&apos;s request, in the same calendar day that the user locked themselves out (with too many failed login attempts). In such an event, the user would again lock themselves out if they have a failed login attempt even once in that same day!&lt;br/&gt;&lt;br/&gt;With this column, the 3 failed login attempts must all occur after the UnlockDate (in addition to being on the same calendar day) in order to cause a lockout.</comment>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
+<defaultValue>LOCALTIMESTAMP</defaultValue>
 <use>1</use>
 <logicalDatatype>LOGDT015</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
+<usesDefaultValue>true</usesDefaultValue>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="LockDate" id="00764298-4D99-7365-CA50-EB9D3E1E21BF">
@@ -67,9 +70,11 @@
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
+<defaultValue>NULL</defaultValue>
 <use>1</use>
 <logicalDatatype>LOGDT015</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
+<usesDefaultValue>true</usesDefaultValue>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
@@ -96,20 +101,20 @@
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
-<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
-<tableCheckConstraint name="USERNAME_PWORD_NOT_SAME" directorySegmentName="seg_0" id="63E28774-369C-109E-6F37-0053C4B5BFFE">
+<tableCheckConstraints>
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="USERNAME_PWORD_NOT_SAME" directorySegmentName="seg_0" id="63E28774-369C-109E-6F37-0053C4B5BFFE">
 <createdBy>Shelley</createdBy>
 <createdTime>2014-11-12 01:51:38 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 <rule>TRIM(Username) != TRIM(PWord)</rule>
 </tableCheckConstraint>
-<tableCheckConstraint name="PWORD_START_UPPERCASE" directorySegmentName="seg_0" id="FE6452E7-5A2C-5F66-6EA9-1CD647E74B45">
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="PWORD_START_UPPERCASE" directorySegmentName="seg_0" id="FE6452E7-5A2C-5F66-6EA9-1CD647E74B45">
 <createdBy>Shelley</createdBy>
 <createdTime>2014-11-12 01:51:38 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
 <rule>SUBSTR(PWord, 1, 1) = UPPER(SUBSTR(PWord, 1, 1))</rule>
 </tableCheckConstraint>
-<tableCheckConstraint name="USERNAME_START_UPPERCASE" directorySegmentName="seg_0" id="9B26571A-89C4-361F-9FE1-4ECB631D52C2">
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="USERNAME_START_UPPERCASE" directorySegmentName="seg_0" id="9B26571A-89C4-361F-9FE1-4ECB631D52C2">
 <createdBy>Shelley</createdBy>
 <createdTime>2014-11-12 01:51:38 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
