@@ -39,42 +39,50 @@
 <dataTypeSize>50</dataTypeSize>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="AccountTypes_ID" id="7B64F908-FBD6-8D16-9935-F00C61128F89">
+<createdBy>Shelley</createdBy>
+<createdTime>2014-11-20 01:37:43 UTC</createdTime>
+<comment>Defaults to type 2 (should be User).</comment>
+<ownerDesignName>Login_Authenticator2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>2</defaultValue>
+<delegate>667555A8-C607-536D-ABCC-5A06FBA91A66</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2F6666F1-9325-5A01-A39B-0933A2914CAD" referredColumn="667555A8-C607-536D-ABCC-5A06FBA91A66"/>
+</associations>
+</Column>
 <Column name="WhenCreated" id="ACFEF159-5099-1BA2-EF4B-227A3F21F38B">
 <createdBy>Jason</createdBy>
 <createdTime>2014-11-10 00:18:12 UTC</createdTime>
 <ownerDesignName>Login_Authenticator2</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
-<defaultValue>LOCALTIMESTAMP</defaultValue>
 <use>1</use>
 <logicalDatatype>LOGDT015</logicalDatatype>
 <usesDefaultValue>true</usesDefaultValue>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="UnlockDate" id="1A82CFD3-AAE6-BE5A-13CA-1D1AB16971F2">
-<createdBy>Shelley</createdBy>
-<createdTime>2014-11-12 03:33:07 UTC</createdTime>
-<comment>Most recent date that the account was unlocked. For new accounts, it should be set to the same date as WhenCreated.&lt;br/&gt;&lt;br/&gt;This is to deal with scenarios when an administrator has unlocked an account upon the user&apos;s request, in the same calendar day that the user locked themselves out (with too many failed login attempts). In such an event, the user would again lock themselves out if they have a failed login attempt even once in that same day!&lt;br/&gt;&lt;br/&gt;With this column, the 3 failed login attempts must all occur after the UnlockDate (in addition to being on the same calendar day) in order to cause a lockout.</comment>
-<ownerDesignName>Login_Authenticator2</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
 <defaultValue>LOCALTIMESTAMP</defaultValue>
-<use>1</use>
-<logicalDatatype>LOGDT015</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
-<usesDefaultValue>true</usesDefaultValue>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="LockStatus" id="00764298-4D99-7365-CA50-EB9D3E1E21BF">
 <createdBy>Shelley</createdBy>
 <createdTime>2014-11-11 09:28:45 UTC</createdTime>
-<comment>If &apos;Y&apos; the account is locked, if &apos;N&apos; the account is unlocked</comment>
+<comment>If &apos;Y&apos; the account is locked, if &apos;N&apos; the account is unlocked.</comment>
 <ownerDesignName>Login_Authenticator2</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
-<defaultValue>NULL</defaultValue>
 <use>1</use>
 <logicalDatatype>LOGDT006</logicalDatatype>
 <dataTypeSize>1</dataTypeSize>
 <usesDefaultValue>true</usesDefaultValue>
+<listOfValues>
+<valueDef value="&apos;N&apos;" description="Unlocked"/>
+<valueDef value="&apos;Y&apos;" description="Locked"/>
+</listOfValues>
+<defaultValue>&apos;N&apos;</defaultValue>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
@@ -100,9 +108,19 @@
 <colUsage columnID="90770484-91D0-4AB5-DAE4-945718A474E8"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="E1B00F31-0B95-74AB-C157-A2BED2447358" name="Accounts_AccountTypes_FK">
+<createdBy>Shelley</createdBy>
+<createdTime>2014-11-20 01:37:43 UTC</createdTime>
+<ownerDesignName>Login_Authenticator2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B64F908-FBD6-8D16-9935-F00C61128F89"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
-<tableCheckConstraints>
-<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="USERNAME_START_UPPERCASE" directorySegmentName="seg_0" id="9B26571A-89C4-361F-9FE1-4ECB631D52C2">
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="USERNAME_START_UPPERCASE" directorySegmentName="seg_0" id="9B26571A-89C4-361F-9FE1-4ECB631D52C2">
 <createdBy>Shelley</createdBy>
 <createdTime>2014-11-12 01:51:38 UTC</createdTime>
 <ownerDesignName>Login_Authenticator</ownerDesignName>
