@@ -216,6 +216,7 @@ public class Login_AuthenticatorEvent implements ActionListener, ItemListener, K
     {   
         if(gui.userName != null && gui.password != null)
         {
+            gui.infoArea.setText("Logging into Account...");
             try
             {
                 gui.reachable = validConn();
@@ -348,6 +349,7 @@ public class Login_AuthenticatorEvent implements ActionListener, ItemListener, K
     {
         if(gui.userName != null && gui.password != null)
         {
+            gui.infoAreaCr.setText("Creating Account...");
             try
             {
                 gui.reachable = validConn();
@@ -362,8 +364,8 @@ public class Login_AuthenticatorEvent implements ActionListener, ItemListener, K
                 //gui.userName = gui.accountNameInputCr.getText();
                 //gui.password = String.valueOf(gui.passwordInputCr.getPassword());
 
-                System.out.println("Password: "+ gui.password );
-                System.out.println("Username: "+ gui.userName );
+                //System.out.println("Password: "+ gui.password );
+                //System.out.println("Username: "+ gui.userName );
 
                 if (gui.userName.charAt(0) != Character.toUpperCase(gui.userName.charAt(0)) ||
                     gui.password.charAt(0) != Character.toUpperCase(gui.password.charAt(0)))
@@ -388,6 +390,7 @@ public class Login_AuthenticatorEvent implements ActionListener, ItemListener, K
 
                 gui.accountNameInputCr.setText(null);
                 gui.passwordInputCr.setText(null);
+                gui.infoAreaCr.setText(null);
                 gui.userName = null;
                 gui.password = null;
 
@@ -399,7 +402,7 @@ public class Login_AuthenticatorEvent implements ActionListener, ItemListener, K
                         gui.displayLogin();
                         break;
                     case 2:
-                        gui.loginResult = "Account already exists."+ gui.password+"\nIf you do not remember your password.\n\nClick on reset password.";
+                        gui.loginResult = "Account already exists.\nIf you do not remember your password.\n\nClick on reset password.";
                         gui.infoAreaCr.setText(gui.loginResult);
                         break;
                     case 3:
