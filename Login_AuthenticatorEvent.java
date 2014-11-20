@@ -5,6 +5,7 @@
  */
 package login_authenticator;
 
+import com.sun.xml.internal.ws.org.objectweb.asm.Type;
 import java.awt.event.*;
 import java.sql.*;
 import java.security.*;
@@ -226,7 +227,7 @@ public class Login_AuthenticatorEvent implements ActionListener, ItemListener, K
                 //gui.userName = gui.accountNameInput.getText();
                 //gui.password = String.valueOf(gui.passwordInput.getPassword());
 
-                gui.query = "begin Login_SP(?,?,?,?); end;";
+                gui.query = "begin Login_SP(?,?,?,?,?); end;";
                 CallableStatement callStmt = gui.conn.prepareCall(gui.query);
 
                 gui.password = encryptPassword(gui.password);
@@ -236,21 +237,39 @@ public class Login_AuthenticatorEvent implements ActionListener, ItemListener, K
                 callStmt.setString(2, gui.password);
                 callStmt.registerOutParameter(3, Types.INTEGER);
                 callStmt.registerOutParameter(4, Types.VARCHAR);
+                callStmt.registerOutParameter(5, Types.VARCHAR);
                 callStmt.execute();
+                gui.results = callStmt.getInt(3);
                 gui.loginResult = callStmt.getString(4);
-                gui.userNameActive = gui.userName;
+                gui.accountType = callStmt.getString(5);
+                
+                if (gui.results == 1)
+                {
+                    gui.userNameActive = gui.userName;
+                }
+                
                 gui.accountNameInput.setText(null);
                 gui.passwordInput.setText(null);
                 gui.userName = null;
                 gui.password = null;
                 gui.infoArea.setText(gui.loginResult);
-                gui.results = callStmt.getInt(3);
+                
                 if (gui.results == 1)
-                        {
-                            gui.userLabel.setText("User Account: " + gui.userNameActive);
-                            gui.displayUser();
-                            //gui.displayAdmin();
-                        }
+                {
+                    if (gui.accountType.equalsIgnoreCase("User"))
+                    {
+                        gui.userLabel.setText("User Account: " + gui.userNameActive);
+                        gui.displayUser();
+                    }
+                    else if (gui.accountType.equalsIgnoreCase("Admin"))
+                    {
+                        gui.displayAdmin();
+                    }
+                    else
+                    {
+                        gui.infoArea.setText("Unrecognized Account Type");
+                    }
+                }
             }
 
             catch (SQLException a)
@@ -270,26 +289,40 @@ public class Login_AuthenticatorEvent implements ActionListener, ItemListener, K
     
     public void logout()
     {   
-        //try
-        //{
+        try
+        {
             gui.reachable = validConn();
-/*
-            gui.query = "begin Logout_SP(?,'V'); end;";
+            if (gui.reachable == false)
+                {
+                    return;
+                }
+
+            gui.query = "begin Logout_SP(?,?); end;";
             CallableStatement callStmt = gui.conn.prepareCall(gui.query);
 
             callStmt.setString(1, gui.userNameActive);
+            callStmt.registerOutParameter(2, Type.INT);
             callStmt.execute();
-*/
-            gui.infoArea.setText("Account: " + gui.userNameActive + "\nLogged Out");
-            gui.displayLogin();
+            gui.results = callStmt.getInt(2);
+            
+            if (gui.results == 0)
+            {
+                gui.infoArea.setText("You have already been logged out");
+                gui.displayLogin();
+            }
+            else
+            {
+                gui.infoArea.setText("You have logged out successfully");
+                gui.displayLogin();
+            }
                     
-        //}
-/*
+        }
+
         catch (SQLException a)
         {
             System.out.println("Exception being thrown\n" + a );
         };
-        */
+       
     
     } 
     

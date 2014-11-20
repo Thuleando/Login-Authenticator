@@ -23,6 +23,7 @@ public class Login_Authenticator extends JFrame
     String userNameActive;
     String password;
     String loginResult;
+    String accountType;
     int results;
     String query;
     String url;
